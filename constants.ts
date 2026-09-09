@@ -1,14 +1,9 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
 
 export const METADATA = {
   title: "Portfolio | Chirag Jain",
   description:
     "I bridge the gap between design and development. I take responsibility to craft an aesthetic user experience using modern frontend architecture.",
-  siteUrl: "https://ayushsingh.net/",
+  siteUrl: "https://chiragjain.net/",
 };
 
 export const MENULINKS = [
@@ -41,7 +36,7 @@ export const TYPED_STRINGS = [
   "I build products people need",
 ];
 
-export const EMAIL = "ayush.singh.xda@gmail.com";
+export const EMAIL = "jainchist@gmail.com";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/62chiragjain",
