@@ -16,6 +16,25 @@ const SKILL_STYLES = {
   SKILL_TITLE: "section-title-sm mb-4 seq",
 };
 
+const SKILL_ICONS: Record<string, string> = {
+  "Business Analysis": "/skills/business-analysis.svg",
+  "Requirements Gathering": "/skills/requirements-gathering.svg",
+  "User Stories": "/skills/user-stories.svg",
+  "Process Mapping": "/skills/process-mapping.svg",
+  "Stakeholder Management": "/skills/stakeholder-management.svg",
+  "Product Management": "/skills/product-management.svg",
+  "Product Thinking": "/skills/product-thinking.svg",
+  "Feature Planning": "/skills/feature-planning.svg",
+  "Project Management": "/skills/project-management.svg",
+  "Agile / Scrum": "/skills/agile-scrum.svg",
+  "Sprint Planning": "/skills/sprint-planning.svg",
+  Jira: "/skills/jira.svg",
+  Figma: "/skills/figma.svg",
+  Notion: "/skills/notion.svg",
+  "Azure DevOps": "/skills/azure-devops.svg",
+  SQL: "/skills/sql.svg",
+};
+
 const SkillsSection = () => {
   const targetSection: MutableRefObject<HTMLDivElement> = useRef(null);
   const [willChange, setwillChange] = useState(false);
@@ -51,8 +70,8 @@ const SkillsSection = () => {
       <p className="section-title-sm seq">SKILLS</p>
       <h1 className="section-heading seq mt-2">My Skills</h1>
       <h2 className="text-2xl md:max-w-2xl w-full seq mt-2">
-        I like to take responsibility to craft aesthetic user experience using
-        modern frontend architecture.{" "}
+        I turn complex business needs into clear product direction and
+        actionable delivery plans.{" "}
       </h2>
     </div>
   );
@@ -91,16 +110,37 @@ const SkillsSection = () => {
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        {skills.map((skill) => (
-          <Image
-            key={skill}
-            src={`/skills/${skill}.svg`}
-            alt={skill}
-            width={76}
-            height={76}
-            className="skill"
-          />
-        ))}
+        {skills.map((skill) => {
+          const icon = skill
+            .split(/\s|\//)
+            .filter(Boolean)
+            .map((word) => word[0])
+            .join("")
+            .slice(0, 2)
+            .toUpperCase();
+
+          return (
+            <div
+              key={skill}
+              className="skill mr-4 mb-4 flex w-40 flex-col items-center text-center"
+              title={skill}
+            >
+              {SKILL_ICONS[skill] ? (
+                <Image
+                  src={SKILL_ICONS[skill]}
+                  alt={`${skill} icon`}
+                  width={64}
+                  height={64}
+                />
+              ) : (
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border border-cyan-300 text-sm font-bold text-cyan-300">
+                  {icon}
+                </span>
+              )}
+              <span className="mt-2 text-sm leading-tight">{skill}</span>
+            </div>
+          );
+        })}
       </div>
     </>
   );
@@ -116,16 +156,13 @@ const SkillsSection = () => {
         <div className="flex flex-col skills-wrapper">
           {renderSectionTitle()}
           <div className="mt-10">
-            {renderSkillColumn("FRONTEND DEVELOPMENT", SKILLS.frontend)}
+            {renderSkillColumn("BUSINESS & STRATEGY", SKILLS.business)}
           </div>
           <div className="flex flex-wrap mt-10">
             <div className="mr-6 mb-6">
-              {renderSkillColumn(
-                "User Interface, User Experience Design",
-                SKILLS.userInterface
-              )}
+              {renderSkillColumn("DELIVERY & COLLABORATION", SKILLS.delivery)}
             </div>
-            <div>{renderSkillColumn("Other Skills", SKILLS.other)}</div>
+            <div>{renderSkillColumn("TOOLS", SKILLS.tools)}</div>
           </div>
         </div>
       </div>

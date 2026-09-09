@@ -20,7 +20,6 @@ const ProjectTile = ({
   const projectCard: MutableRefObject<HTMLDivElement> = useRef(null);
   const {
     name,
-    tech,
     image,
     blurImage,
     description,
@@ -36,28 +35,6 @@ const ProjectTile = ({
       gyroscope: false,
     });
   }, [projectCard]);
-
-  const renderTechIcons = (techStack: string[]): React.ReactNode => (
-    <div
-      className={`
-      ${styles.techIcons} w-1/2 h-full absolute left-24 top-0 sm:flex items-center hidden
-    `}
-    >
-      <div className="flex flex-col pb-8">
-        {techStack.map((tech, i) => (
-          <div className={`${i % 2 === 0 && "ml-16"} mb-4`} key={tech}>
-            <Image
-              src={`/projects/tech/${tech}.svg`}
-              alt={tech}
-              height={45}
-              objectFit="contain"
-              width={45}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 
   const renderDescription = (description: string): React.ReactNode => (
     <h2
@@ -142,7 +119,6 @@ const ProjectTile = ({
         {renderProjectImage(image, blurImage, name)}
         {renderTopBottomGradient(stop1)}
         {renderProjectName(name)}
-        {renderTechIcons(tech)}
         {renderDescription(description)}
       </div>
     </a>

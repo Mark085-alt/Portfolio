@@ -4,7 +4,7 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import { EMAIL, MENULINKS, SOCIAL_LINKS } from "../../constants";
+import { CONTACT_LINK, EMAIL, MENULINKS, SOCIAL_LINKS } from "../../constants";
 import Image from "next/image";
 import Button, { ButtonTypes } from "./button";
 
@@ -38,13 +38,13 @@ const Footer = () => {
             target: "_blank",
             rel: "noreferrer",
           }}
-          href="/Ayush_Resume.pdf"
+          href="/Chirag-Jain-Resume.pdf"
         ></Button>
         <Button
           classes="ml-3"
           type={ButtonTypes.WHITE}
           name="Let's Talk"
-          href={SOCIAL_LINKS.topmate}
+          href={CONTACT_LINK}
           otherProps={{
             target: "_blank",
             rel: "noreferrer",
@@ -52,7 +52,7 @@ const Footer = () => {
         ></Button>
       </div>
       <h2 className="text-center text-sm sm:text-base mt-8">
-        Designed and Developed with ❤️ by Ayush
+        Designed and Developed with ❤️ by Chirag
       </h2>
     </>
   );

@@ -4,7 +4,13 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import { EMAIL, MENULINKS, SOCIAL_LINKS, TYPED_STRINGS } from "../../constants";
+import {
+  CONTACT_LINK,
+  EMAIL,
+  MENULINKS,
+  SOCIAL_LINKS,
+  TYPED_STRINGS,
+} from "../../constants";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Image from "next/image";
@@ -83,7 +89,7 @@ const HeroSection = React.memo(() => {
     <div className={HERO_STYLES.CONTENT}>
       <div className="md:mb-4 mb-2">
         <h2 className="text-4xl seq">Hello 👋🏻</h2>
-        <h1 className="text-3xl seq">I am Ayush Singh</h1>
+        <h1 className="text-3xl seq">I am Chirag Jain</h1>
       </div>
       <p className="mb-4">
         <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
@@ -98,13 +104,13 @@ const HeroSection = React.memo(() => {
             target: "_blank",
             rel: "noreferrer",
           }}
-          href="/Ayush_Resume.pdf"
+          href="/Chirag-Jain-Resume.pdf"
         ></Button>
         <Button
           classes="ml-3"
           type={ButtonTypes.PRIMARY}
           name="Let's Talk"
-          href={SOCIAL_LINKS.topmate}
+          href={CONTACT_LINK}
           otherProps={{
             target: "_blank",
             rel: "noreferrer",
