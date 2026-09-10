@@ -164,8 +164,8 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle:
       "B.Tech in Computer Science. Built a strong foundation in technology, software development, and problem-solving.",
-    image: "/timeline/reactindia.svg",
-    slideImage: "/timeline/reactindia.jpg",
+    image: "/timeline/TMU.png",
+    slideImage: "/timeline/TMUright.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
@@ -175,8 +175,8 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle:
       "Web Development Intern — ADM Software Solutions. Worked on web development projects and gained practical experience in building and maintaining web applications.",
-    image: "/timeline/hotstar.svg",
-    slideImage: "/timeline/hotstar.jpeg",
+    image: "/timeline/ADM.png",
+    slideImage: "/timeline/ADMright.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
@@ -186,8 +186,8 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle:
       "Data Analyst & Web Development Intern — 6W Research. Worked across data analysis and web development, gaining experience in data-driven problem solving and digital solutions.",
-    image: "/timeline/flipkart.svg",
-    slideImage: "/timeline/flipkart.gif",
+    image: "/timeline/6w.png",
+    slideImage: "/timeline/6wright.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
@@ -197,8 +197,8 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle:
       "Business Development Trainee — Intellipaat Software Solutions. Gained experience in business development, client interaction, and understanding business requirements.",
-    image: "/timeline/huminos.svg",
-    slideImage: "/timeline/huminos-freelance.jpg",
+    image: "/timeline/Intellipaat.png",
+    slideImage: "/timeline/Intellipaatright.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
@@ -208,7 +208,8 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle:
       "Associate Business Analyst — GeekyAnts. Working across business analysis and project management, translating business needs into clear requirements and coordinating digital product delivery.",
-    slideImage: "/timeline/aftereffects.jpg",
+    image: "/timeline/GeekyAnts.png",
+    slideImage: "/timeline/GeekyAntsright.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },

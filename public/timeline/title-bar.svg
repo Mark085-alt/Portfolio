@@ -49,4 +49,8 @@
 <rect width="10.1111" height="10.8889" fill="white" transform="translate(395.5 10.1111)"/>
 </clipPath>
 </defs>
+
+<!-- Replaced URL text while preserving the original 644x32 dimensions. -->
+<rect x="267" y="6" width="274" height="20" fill="#3C5175"/>
+<text x="272" y="20" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#F2F2F2">www.chiragjain.net</text>
 </svg>
